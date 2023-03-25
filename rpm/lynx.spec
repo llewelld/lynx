@@ -22,7 +22,10 @@ Documentation for Lynx - Lynx is the text web browser.
 %autosetup -n %{name}-%{version}/lynx2.9.0dev.12
 
 %build
-%configure
+%configure \
+    --with-ssl \
+    --with-screen=ncurses
+
 %make_build
 
 %install
